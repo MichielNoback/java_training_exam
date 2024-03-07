@@ -20,22 +20,7 @@ public class MyUtils {
      */
     public static List<String> findWordWithSubstring(String text, String substringToFind) {
         //YOUR CODE
-        //throw new UnsupportedOperationException("Not yet implemented");
-
-        //TODO -- REMOVE START
-        if(text == null || text.isEmpty() || substringToFind == null || substringToFind.isEmpty()) {
-            throw new IllegalArgumentException("Text or substring cannot be empty");
-        }
-        substringToFind = substringToFind.toUpperCase();
-        List<String> results = new ArrayList<>();
-        String[] result = text.split("[.,!?:; \s]+");
-        for (String s : result) {
-            if (s.toUpperCase().contains(substringToFind)) {
-                results.add(s);
-            }
-        }
-        return results;
-        //TODO -- REMOVE END
+        throw new UnsupportedOperationException("Not yet implemented");
 
     }
 }

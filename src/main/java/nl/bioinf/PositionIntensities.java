@@ -29,23 +29,8 @@ public class PositionIntensities {
      */
     public Basecall getBasecall() {
         //YOUR CODE
-        //throw new UnsupportedOperationException("Not yet implemented");
+        throw new UnsupportedOperationException("Not yet implemented");
 
-        //TODO -- REMOVE START
-        int total = scoreG + scoreA + scoreT + scoreC;
-
-        List<Basecall> basecalls = new ArrayList<>();
-        basecalls.add(new Basecall('G', (double) scoreG / total));
-        basecalls.add(new Basecall('A', (double) scoreA / total));
-        basecalls.add(new Basecall('T', (double) scoreT / total));
-        basecalls.add(new Basecall('C', (double) scoreC / total));
-        basecalls.sort((o1, o2) -> Double.compare(o2.getProbability(), o1.getProbability()));
-        Basecall best = basecalls.get(0);
-        if (best.getProbability() < 0.6) {
-            best.setNucleotide('N');
-        }
-        return best;
-        //TODO -- REMOVE END
     }
 
     public int getScoreG() {

@@ -27,45 +27,18 @@ public class Sequencer {
     public List<PositionIntensities> readIntensities(String intensitiesFile) {
         Path path = Paths.get(intensitiesFile);
 
-        //TODO -- REMOVE START
-        List<PositionIntensities> intensities = new ArrayList<>();
-        int lineCount = 0;
-        //TODO -- REMOVE END
-
         try(BufferedReader reader = Files.newBufferedReader(path, Charset.forName("UTF-8"))){
             String currentLine = null;
             while((currentLine = reader.readLine()) != null) {
                 //System.out.println(currentLine);
                 //PROCEED FROM HERE
 
-                //TODO -- REMOVE START
-                //POS	G	A	T	C
-                //1	89	11	9	4
-
-                lineCount++;
-                if (lineCount == 1) {
-                    continue;
-                }
-                String[] posScores = currentLine.split("\t");
-                intensities.add(new PositionIntensities(
-                    Integer.parseInt(posScores[0]),
-                    Integer.parseInt(posScores[1]),
-                    Integer.parseInt(posScores[2]),
-                    Integer.parseInt(posScores[3]),
-                    Integer.parseInt(posScores[4])
-                ));
-
-                //TODO -- REMOVE END
-
             }
         }catch(IOException ex){
             ex.printStackTrace();
         }
-        //TODO -- REMOVE START
-        return intensities;
-        //TODO -- REMOVE END
 
-        //return null;
+        return null;
     }
 
     /**
@@ -75,35 +48,15 @@ public class Sequencer {
      */
     public List<Basecall> executeBasecalls(List<PositionIntensities> intensities) {
         //YOUR CODE
-        //throw new UnsupportedOperationException("Not yet implemented");
+        throw new UnsupportedOperationException("Not yet implemented");
 
-        //TODO -- REMOVE START
-
-        List<Basecall> basecalls = new ArrayList<>();
-        for (PositionIntensities positionIntensities: intensities) {
-            basecalls.add(positionIntensities.getBasecall());
-        }
-        return basecalls;
-        //TODO -- REMOVE END
     }
 
 
     public RunQuality determineRunQuality(List<Basecall> basecalls) {
         //YOUR CODE
-        //throw new UnsupportedOperationException("Not yet implemented");
+        throw new UnsupportedOperationException("Not yet implemented");
 
-        //TODO -- REMOVE START
-        int ambiguities = 0;
-        double totalProbability = 0;
-        for (Basecall basecall: basecalls) {
-            if (basecall.nucleotide == 'N') {
-                ambiguities++;
-            }
-            totalProbability += basecall.probability;
-        }
-        double averageProbability = totalProbability / basecalls.size();
-        return new RunQuality(averageProbability, ambiguities);
-        //TODO -- REMOVE END
     }
 
     /**
