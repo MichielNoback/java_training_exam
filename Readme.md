@@ -1,7 +1,8 @@
 
-############################################################
-######## THIS IS A TRAINING EXAM FOR THE JAVA COURSE  ######
-############################################################
+############################################################  
+######## THIS IS A TRAINING EXAM FOR THE JAVA COURSE  ######  
+######### checkout branch SOLUTIONS for the answers  #######  
+############################################################  
 
 
 ## Test header (tentamen voorblad)
@@ -196,10 +197,9 @@ public record RunQuality(double averageProbability, int numberOfAmbiguities) { }
 
 **Implement method `determineRunQuality()` in class `Sequencer`**.
 
-
+You can check you solutions by running `main()`
 
 <hr />
-
 
 #### END OF TEST
 
