@@ -1,9 +1,10 @@
+
+############################################################
+######## THIS IS A TRAINING EXAM FOR THE JAVA COURSE  ######
+############################################################
+
+
 ## Test header (tentamen voorblad)
-
-##########################################################
-######## TOO MANY QUESTIONS - SELECTION REQUIRED    ######
-##########################################################
-
 
 - **Teacher** Michiel Noback (NOMI), to be reached at +31 50 595 4691
 - **Scanned by** KEMC
